@@ -9,6 +9,9 @@ import UIKit
 
 class ViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    
+    var pictures = [Picture]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,11 +29,19 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate, UI
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return pictures.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
+        let picture = pictures[indexPath.row]
+        
+//        cell.textLabel?.text = picture.
+        
+        
+        
+        
         return cell
     }
     
